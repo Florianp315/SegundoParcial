@@ -31,7 +31,7 @@ namespace Punto1
 
                 // Determinar los rangos de numero segun la cantidad de jugadores
 
-                if (numJgadores == 2)
+                if (numJugadores == 2)
                 {
                     min = 0; max = 50;
 
@@ -46,6 +46,20 @@ namespace Punto1
                 {
                     min = 0; max=200;
                 }
-        }
+
+                else
+                {
+                    Console.WriteLine("no esta permitido este numero de jugadores ");
+
+                }
+
+                numeroAdivinar = random.Next(min, max);
+                numeroIntentos = 0;
+
+
+                Console.WriteLine("Numero Aleatorio generado ¡Adivinen!");
+
+
+            }
     }
 }
