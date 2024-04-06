@@ -52,20 +52,25 @@ namespace Punto1
                 else
                 {
                     Console.WriteLine("no esta permitido este numero de jugadores ");
+                    return;
 
                 }
 
                 numeroAdivinar = random.Next(min, max);
-                numeroIntentos = 0;
+                
 
 
                 Console.WriteLine("Numero Aleatorio generado ¡Adivinen!");
+
+                bool haGanado = false;
+
+                while (!haGanado)
 
                 // Turno de cada jugador
 
                 for (int numerojugador = 1; numerojugador <= numJugadores; numerojugador++)
                 {
-                    Console.Write("jugador {numeroJugador}, ingrese su numero");
+                    Console.Write($"jugador {numerojugador}, ingrese su numero:");
                     numeroIngresado = int.Parse(Console.ReadLine());
 
                     if (numeroIngresado > numeroAdivinar)
@@ -75,34 +80,28 @@ namespace Punto1
 
                     else if (numeroIngresado < numeroAdivinar)
                     {
-                        Console.Write("MAYOR");
+                        Console.WriteLine("MAYOR");
                     }
                     else
                     {
                         Console.WriteLine("¡ADIVINASTE EL NUMERO, HAS GANADO!");
+                            haGanado = true;
+                            break;
+                        }
                     }
-
-                    numeroIntentos++;
-
-
-
-                }
-
-                if (numeroIntentos == numJugadores)
-                {
-                    Console.WriteLine("Lo siento, Nadie adivino el numero. el numero era: {numeroAdivinar}");
-                }
-                Console.Write("¿Quieres volver a jugar? (s/n):");
-                respuesta = Console.ReadLine().ToLower();
-
-                if (respuesta != "s")
-                {
-                    jugarOtravez = false;
-                }
-                Console.Clear(); // Limpiar la consola para la siguiente partida
-
             }
+
+            Console.Write("¿Quieres volver a jugar? (s/n): ");
+            respuesta = Console.ReadLine().ToLower();
+
+            if (respuesta != "s")
+            {
+                jugarOtravez = false;
+            }
+            Console.Clear();
             Console.WriteLine("¡Gracias por jugar!");
         }
-
     }
+}
+
+                    
