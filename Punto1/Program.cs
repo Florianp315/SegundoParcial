@@ -15,6 +15,14 @@ namespace Punto1
             int numeroIngresado;
             string respuesta;
 
+            Random random= new Random();
+            bool jugarOtravez =true
+
+                //Introduccion
+
+                while (jugarOtravez) 
+            {
+                Console.WriteLine("Bienvenido(a) al juego adivina el numero!!");
         }
     }
 }
