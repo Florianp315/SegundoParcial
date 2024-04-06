@@ -70,6 +70,12 @@ namespace Punto1
                     {
                         Console.WriteLine("MENOR");
                     }
+
+                    else if (numeroIngresado < numeroAdivinar)
+                        {
+                        Console.Write("MAYOR");
+                        }
+
                 }
             }
     }
