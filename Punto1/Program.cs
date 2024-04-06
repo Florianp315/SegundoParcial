@@ -11,18 +11,25 @@ namespace Punto1
             //Declaracion de Variable
             int numeroAdivinar;
             int numeroIntentos;
-            int numeroJugador;
+            int numJugadores;
             int numeroIngresado;
+            int min, max;
             string respuesta;
 
+
             Random random= new Random();
-            bool jugarOtravez =true
+            bool jugarOtravez = true;
 
                 //Introduccion
 
                 while (jugarOtravez) 
             {
                 Console.WriteLine("Bienvenido(a) al juego adivina el numero!!");
+
+                Console.WriteLine("Ingresa el numero de jugadores (Valido entre 2 y 4):");
+                int numJugadores = int.Parse(Console.ReadLine());
+
+                
         }
     }
 }
