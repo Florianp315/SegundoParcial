@@ -17,12 +17,12 @@ namespace Punto1
             string respuesta;
 
 
-            Random random= new Random();
+            Random random = new Random();
             bool jugarOtravez = true;
 
-                //Introduccion
+            //Introduccion
 
-                while (jugarOtravez) 
+            while (jugarOtravez)
             {
                 Console.WriteLine("Bienvenido(a) al juego adivina el numero!!");
 
@@ -30,6 +30,8 @@ namespace Punto1
                 numJugadores = int.Parse(Console.ReadLine());
 
                 // Determinar los rangos de numero segun la cantidad de jugadores
+
+                min = 0; max = 0;
 
                 if (numJugadores == 2)
                 {
@@ -42,9 +44,9 @@ namespace Punto1
                     min = 0; max = 100;
                 }
 
-                else if(numJugadores == 4)
+                else if (numJugadores == 4)
                 {
-                    min = 0; max=200;
+                    min = 0; max = 200;
                 }
 
                 else
@@ -72,18 +74,18 @@ namespace Punto1
                     }
 
                     else if (numeroIngresado < numeroAdivinar)
-                        {
+                    {
                         Console.Write("MAYOR");
-                        }
+                    }
                     else
                     {
                         Console.WriteLine("¡ADIVINASTE EL NUMERO, HAS GANADO!");
                     }
 
                     numeroIntentos++;
-               
-                
-                
+
+
+
                 }
 
                 if (numeroIntentos == numJugadores)
@@ -91,6 +93,16 @@ namespace Punto1
                     Console.WriteLine("Lo siento, Nadie adivino el numero. el numero era: {numeroAdivinar}");
                 }
                 Console.Write("¿Quieres volver a jugar? (s/n):");
+                respuesta = Console.ReadLine().ToLower();
+
+                if (respuesta != "s")
+                {
+                    jugarOtravez = false;
+                }
+                Console.Clear(); // Limpiar la consola para la siguiente partida
+
             }
+            Console.WriteLine("¡Gracias por jugar!");
+        }
+
     }
-}
