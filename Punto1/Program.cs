@@ -81,10 +81,16 @@ namespace Punto1
                     }
 
                     numeroIntentos++;
-
-
-
+               
+                
+                
                 }
+
+                if (numeroIntentos == numJugadores)
+                {
+                    Console.WriteLine("Lo siento, Nadie adivino el numero. el numero era: {numeroAdivinar}");
+                }
+                Console.Write("¿Quieres volver a jugar? (s/n):");
             }
     }
 }
