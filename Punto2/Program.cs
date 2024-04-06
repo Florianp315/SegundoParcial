@@ -52,6 +52,35 @@ internal class Program
                 {
                     Console.Write("¿Desea solicitar un préstamo? (s/n): ");
                     string respuestaPrestamoSocio1 = Console.ReadLine().ToLower();
+                    if (respuestaPrestamoSocio1 == "s")
+                    {
+                        prestamoSocio1 += aporteMensualSocio1;
+
+                         // Socio 2
+                Console.Write("Ingrese la cantidad que desea ahorrar el socio 2: ");
+                aporteMensualSocio2 = Convert.ToDecimal(Console.ReadLine());
+
+                if (aporteMensualSocio2 == 0)
+                {
+                    multasSocio2 += 20000; // Aplicar multa de $20.000 si no aporta nada
                 }
+
+                if (aporteMensualSocio2 < prestamoSocio2)
+                {
+                    Console.WriteLine("El préstamo solicitado supera el valor ahorrado. No se puede aprobar el préstamo.");
+                }
+                else
+                {
+                    Console.Write("¿Desea solicitar un préstamo? (s/n): ");
+                    string respuestaPrestamoSocio2 = Console.ReadLine().ToLower();
+
+                    if (respuestaPrestamoSocio2 == "s")
+                    {
+                        prestamoSocio2 += aporteMensualSocio2;
+                    }
+                }
+                    }
+                }
+            }
     }
 }
