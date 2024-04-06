@@ -75,6 +75,14 @@ namespace Punto1
                         {
                         Console.Write("MAYOR");
                         }
+                    else
+                    {
+                        Console.WriteLine("¡ADIVINASTE EL NUMERO, HAS GANADO!");
+                    }
+
+                    numeroIntentos++;
+
+
 
                 }
             }
