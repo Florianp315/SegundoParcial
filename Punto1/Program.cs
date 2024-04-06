@@ -10,7 +10,6 @@ namespace Punto1
 
             //Declaracion de Variable
             int numeroAdivinar;
-            int numeroIntentos;
             int numJugadores;
             int numeroIngresado;
             int min, max;
