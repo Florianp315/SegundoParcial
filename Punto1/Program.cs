@@ -59,7 +59,18 @@ namespace Punto1
 
                 Console.WriteLine("Numero Aleatorio generado ¡Adivinen!");
 
+                // Turno de cada jugador
 
+                for (int numerojugador = 1; numerojugador <= numJugadores; numerojugador++)
+                {
+                    Console.Write("jugador {numeroJugador}, ingrese su numero");
+                    numeroIngresado = int.Parse(Console.ReadLine());
+
+                    if (numeroIngresado > numeroAdivinar)
+                    {
+                        Console.WriteLine("MENOR");
+                    }
+                }
             }
     }
 }
