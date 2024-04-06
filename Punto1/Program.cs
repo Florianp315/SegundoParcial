@@ -27,9 +27,25 @@ namespace Punto1
                 Console.WriteLine("Bienvenido(a) al juego adivina el numero!!");
 
                 Console.WriteLine("Ingresa el numero de jugadores (Valido entre 2 y 4):");
-                int numJugadores = int.Parse(Console.ReadLine());
+                numJugadores = int.Parse(Console.ReadLine());
 
-                
+                // Determinar los rangos de numero segun la cantidad de jugadores
+
+                if (numJgadores == 2)
+                {
+                    min = 0; max = 50;
+
+                }
+
+                else if (numJugadores == 3)
+                {
+                    min = 0; max = 100;
+                }
+
+                else if(numJugadores == 4)
+                {
+                    min = 0; max=200;
+                }
         }
     }
 }
