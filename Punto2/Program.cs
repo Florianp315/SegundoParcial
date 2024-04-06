@@ -18,7 +18,15 @@ internal class Program
 
         while (volver)
         {
-            decimal aporteMensual, rendimientoMensual, aporteTotal = 0, rendimientoTotal = 0, bonoMensual = 0, bonoTotal = 0, aporteTotalNeto, tasaMensual;
+            decimal aporteMensualSocio1, aporteMensualSocio2;
+            decimal rendimientoMensualSocio1, rendimientoMensualSocio2;
+            decimal aporteTotalSocio1 = 0, aporteTotalSocio2 = 0;
+            decimal rendimientoTotalSocio1 = 0, rendimientoTotalSocio2 = 0;
+            decimal bonoMensualSocio1 = 0, bonoMensualSocio2 = 0;
+            decimal bonoTotalSocio1 = 0, bonoTotalSocio2 = 0;
+            decimal prestamoSocio1 = 0, prestamoSocio2 = 0;
+            decimal interesesPrestamoSocio1 = 0, interesesPrestamoSocio2 = 0;
+            decimal multasSocio1 = 0, multasSocio2 = 0;
             string continuar;
 
             //Clase random
